@@ -1,0 +1,36 @@
+
+:root{
+	--verde:#0f9e5c;
+	--fondo-panel:#4b4f58;
+	--icon-menu:#c6d0d9;
+	--text-menu:#878b94;
+	--bg-menu:#4d545c;
+	--f7-list-border-color: none;
+}
+
+.panel-left{
+	background-color: var(--fondo-panel) !important;
+	color: #fff;
+}
+
+.letra-verde{
+	color: var(--verde);
+}
+
+.list-menu{
+	background-color: var(--bg-menu) !important;
+}
+
+.list-menu .item-media span{
+	color: var(--icon-menu);
+}
+
+.list-menu .item-inner{
+	color: var(--text-menu);
+}
+
+
+
+
+
+
