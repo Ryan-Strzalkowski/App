@@ -8,9 +8,9 @@ var app = new Framework7({
     },
 	cache:false,
 	cacheDuration: 0,
-	modalTitle: 'My App',
+	modalTitle: 'Delivery Food',
 	dialog: {
-		title: 'App Diseño web 2 ☺',
+		title: 'Delivery Food ☺',
 		buttonOk: 'Aceptar',
   	},
 	routes: [
@@ -23,6 +23,16 @@ var app = new Framework7({
 		path: '/about/',
     	url: 'about.html',
     	name: 'about',
+  		},
+		{
+		path: '/perfil/',
+    	url: 'perfil.html',
+    	name: 'perfil',
+  		},
+		{
+		path: '/carnes/',
+    	url: 'carnes.html',
+    	name: 'carnes',
   		}
 	]
 });
@@ -35,6 +45,21 @@ $$('#btnAlerta').on('click',function(){
 	app.dialog.alert('Hola Diseño Web 2 ♠');	
 });
 
+
+$$('#btnLogin').on('click', function(e){
+	e.preventDefault();
+	
+	var usuario = $$('#username').val();
+	var password = $$('#password').val();
+	
+	if (usuario == 'admin' && password == "admin"){
+		$$('#nombre').html('Hola Ryan S.');
+		app.loginScreen.close('.login-screen');		
+	}else{
+		app.dialog.alert('Datos Ingresados no son validos');
+	}
+  
+});
 
 
 
